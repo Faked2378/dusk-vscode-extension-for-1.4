@@ -1,0 +1,78 @@
+{
+    "scopeName": "source.dusk",
+    "fileTypes": ["dusk"],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#commands"
+        },
+        {
+            "include": "#nestedCommands"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#punctuation"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "name": "comment.line.dusk",
+            "match": "//.*$"
+        },
+        "commands": {
+            "name": "keyword.control.dusk",
+            "match": "^@[a-zA-Z0-9_]+\\b"
+        },
+        "nestedCommands": {
+            "name": "keyword.control.dusk",
+            "begin": "\\*@[a-zA-Z0-9_]+\\b",
+            "end": "\\b",
+            "patterns": [
+                {
+                    "include": "#strings"
+                },
+                {
+                    "include": "#numbers"
+                },
+                {
+                    "include": "#operators"
+                },
+                {
+                    "include": "#punctuation"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.dusk",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "match": "\\\\(?:[\"\\\\/bfnrt]|u[0-9a-fA-F]{4})"
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.dusk",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        "operators": {
+            "name": "keyword.operator.dusk",
+            "match": "\\+|\\-|\\*|\\/"
+        },
+        "punctuation": {
+            "name": "punctuation.dusk",
+            "match": "[\\(\\),]"
+        }
+    }
+}
