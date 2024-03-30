@@ -1,5 +1,7 @@
 {
   "name": "dusk",
+  "icon": "dusk-logo.png",
+  "repository": {},
   "displayName": "dusk language support",
   "description": "make sure to check it out: (NOT AVAILABLE YET)",
   "version": "0.0.1",
