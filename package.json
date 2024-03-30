@@ -1,5 +1,6 @@
 {
   "name": "dusk",
+  "publisher": "mciganik",
   "icon": "dusk-logo.png",
   "repository": "https://github.com/Faked2378/dusk-vscode-extension-for-1.4",
   "displayName": "dusk language support",
